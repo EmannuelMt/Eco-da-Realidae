@@ -1,0 +1,43 @@
+/* src/components/master-tools/TokenPalette.css */
+.token-palette {
+    background: rgba(30, 30, 30, 0.8);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .token-palette h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .tokens-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .token-button {
+    width: 100%;
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .token-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  
+  .token-button.selected {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 2px white;
+  }

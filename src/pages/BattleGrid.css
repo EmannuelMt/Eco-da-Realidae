@@ -1,0 +1,38 @@
+/* src/pages/BattleGrid.css */
+.battle-grid-container {
+    display: flex;
+    height: calc(100vh - 60px); /* Ajuste para a altura da navbar */
+  }
+  
+  .grid-controls {
+    width: 250px;
+    padding: 1rem;
+    background: #1a1a1a;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .grid-stage {
+    flex: 1;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+  }
+  
+  /* Adicione estilos responsivos conforme necessário */
+  @media (max-width: 768px) {
+    .battle-grid-container {
+      flex-direction: column;
+    }
+    
+    .grid-controls {
+      width: 100%;
+      flex-direction: row;
+      overflow-x: auto;
+      padding: 0.5rem;
+    }
+  }

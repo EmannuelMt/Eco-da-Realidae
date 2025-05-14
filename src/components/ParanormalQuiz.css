@@ -1,0 +1,183 @@
+/* src/components/ParanormalQuiz.css */
+.quiz-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(26, 28, 34, 0.8);
+  border-radius: 10px;
+  border: 1px solid #003f5c;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.quiz-header h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  color: #e0e0e0;
+  margin-right: 1rem;
+  flex: 1;
+}
+
+.question-counter {
+  background: #0b0c10;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-family: 'Cinzel', serif;
+  color: #c4a000;
+  font-size: 0.9rem;
+  border: 1px solid #003f5c;
+}
+
+.question-counter span {
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.quiz-options {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.quiz-options button {
+  background: rgba(11, 12, 16, 0.6);
+  border: 1px solid #003f5c;
+  color: #e0e0e0;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  font-family: 'Roboto Serif', serif;
+  font-size: 1rem;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quiz-options button:hover {
+  background: rgba(111, 66, 193, 0.2);
+  border-color: #6f42c1;
+}
+
+.quiz-options button.selected {
+  background: rgba(0, 184, 148, 0.2);
+  border-color: #00b894;
+  transform: scale(0.98);
+}
+
+.option-icon {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  color: #c4a000;
+}
+
+.quiz-result {
+  text-align: center;
+}
+
+.result-header {
+  position: relative;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid;
+}
+
+.result-icon-container {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.result-header h3 {
+  font-family: 'Cinzel', serif;
+  color: #e0e0e0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.result-content h4 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.6rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.result-content p {
+  color: #a0a0a0;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.score-meter {
+  height: 8px;
+  background: rgba(0, 63, 92, 0.3);
+  border-radius: 4px;
+  margin: 2rem 0;
+  overflow: hidden;
+}
+
+.score-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1s ease;
+}
+
+.retry-button {
+  background: linear-gradient(135deg, #6f42c1 0%, #9e1b1b 100%);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.retry-button:hover {
+  background: linear-gradient(135deg, #9e1b1b 0%, #6f42c1 100%);
+  box-shadow: 0 0 15px rgba(158, 27, 27, 0.3);
+}
+
+.result-icon {
+  font-size: 2.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .quiz-container {
+    padding: 1.5rem;
+    margin: 1rem auto;
+  }
+  
+  .quiz-header {
+    flex-direction: column;
+  }
+  
+  .question-counter {
+    margin-top: 1rem;
+    align-self: flex-end;
+  }
+  
+  .quiz-options button {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,62 @@
+.class-selector {
+    padding: 1rem;
+  }
+  
+  .classes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .class-card {
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: rgba(30, 30, 30, 0.7);
+  }
+  
+  .class-card:hover {
+    border-color: #7b1fa2;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .class-card.selected {
+    border-color: #4a148c;
+    background: rgba(74, 20, 140, 0.3);
+  }
+  
+  .class-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .class-icon {
+    font-size: 2rem;
+  }
+  
+  .class-card h3 {
+    margin: 0;
+    color: #e91e63;
+    font-size: 1.3rem;
+  }
+  
+  .class-card p {
+    margin-bottom: 1rem;
+    color: #ccc;
+  }
+  
+  .class-perks {
+    padding-left: 1.5rem;
+    color: #aaa;
+    font-size: 0.9rem;
+  }
+  
+  .class-perks li {
+    margin-bottom: 0.3rem;
+  }

@@ -1,0 +1,197 @@
+/* src/components/MysteryOfTheWeek.css */
+.mystery-week-section {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 4rem auto;
+  background: linear-gradient(to right, rgba(26, 28, 34, 0.7), rgba(11, 12, 16, 0.9));
+  border-radius: 10px;
+  border-left: 4px solid #6f42c1;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-header h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 1rem 0;
+}
+
+.section-icon {
+  font-size: 2.5rem;
+  color: #c4a000;
+  margin-bottom: 0.5rem;
+}
+
+.divider {
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #6f42c1, transparent);
+  margin: 0.5rem 0;
+}
+
+.mystery-container {
+  background: rgba(11, 12, 16, 0.6);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #003f5c;
+}
+
+.mystery-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #003f5c;
+  position: relative;
+}
+
+.mystery-header h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin: 0;
+}
+
+.title-icon {
+  font-size: 1.8rem;
+  color: #6f42c1;
+}
+
+.danger-badge {
+  padding: 0.3rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: auto;
+}
+
+.danger-badge.high {
+  background: rgba(158, 27, 27, 0.3);
+  color: #9e1b1b;
+  border: 1px solid #9e1b1b;
+}
+
+.mystery-description {
+  color: #e0e0e0;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.mystery-clues h4 {
+  font-family: 'Cinzel', serif;
+  color: #c4a000;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.clue-icon {
+  color: #6f42c1;
+  margin-right: 0.7rem;
+  font-size: 1.1rem;
+}
+
+.mystery-clues ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.mystery-clues li {
+  background: rgba(26, 28, 34, 0.5);
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+  border-left: 3px solid #6f42c1;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.mystery-clues li:hover {
+  background: rgba(26, 28, 34, 0.8);
+  transform: translateX(5px);
+}
+
+.mystery-progress {
+  margin: 2rem 0;
+}
+
+.progress-bar {
+  height: 6px;
+  background: rgba(0, 63, 92, 0.3);
+  border-radius: 3px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(to right, #6f42c1, #00b894);
+  border-radius: 3px;
+}
+
+.mystery-status {
+  font-family: 'Cinzel', serif;
+  color: #e0e0e0;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.mystery-status span {
+  color: #c4a000;
+  font-weight: bold;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: linear-gradient(135deg, #c4a000 0%, #e4c21a 100%);
+  color: #0b0c10;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, #e4c21a 0%, #c4a000 100%);
+  box-shadow: 0 0 15px rgba(196, 160, 0, 0.5);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .mystery-week-section {
+    padding: 2rem 1rem;
+    margin: 3rem auto;
+  }
+  
+  .mystery-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .danger-badge {
+    margin-left: 0;
+  }
+}

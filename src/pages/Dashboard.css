@@ -1,0 +1,245 @@
+:root {
+  --primary-dark: #0b0c10;
+  --secondary-dark: #1a1c22;
+  --primary-accent: #6f42c1;
+  --secondary-accent: #c4a000;
+  --mystic-purple: #9c27b0;
+  --text-primary: #e0e0e0;
+  --text-emphasis: #ffffff;
+  --card-bg: rgba(26, 28, 34, 0.7);
+  --card-border: rgba(111, 66, 193, 0.3);
+  --card-hover: rgba(111, 66, 193, 0.1);
+  --avatar-size: 80px;
+}
+
+.dashboard-container {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.dashboard-header {
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.user-welcome-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.user-avatar-container {
+  position: relative;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  flex-shrink: 0;
+}
+
+.user-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-accent);
+  box-shadow: 0 0 20px rgba(111, 66, 193, 0.3);
+}
+
+.default-avatar {
+  width: 100%;
+  height: 100%;
+  color: var(--primary-accent);
+  opacity: 0.8;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.welcome-title {
+  color: var(--text-emphasis);
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.welcome-title span {
+  color: var(--primary-accent);
+  background: linear-gradient(90deg, var(--primary-accent), var(--mystic-purple));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.welcome-subtitle {
+  color: var(--text-primary);
+  opacity: 0.8;
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+.dashboard-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.preview-section,
+.campaigns-section {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  min-height: 300px;
+}
+
+.quick-actions-section {
+  grid-column: span 2;
+}
+
+.section-title {
+  color: var(--text-emphasis);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.title-icon {
+  color: var(--primary-accent);
+}
+
+.actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.action-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.action-card:hover {
+  border-color: var(--primary-accent);
+  background: var(--card-bg);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(111, 66, 193, 0.3);
+}
+
+.action-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--action-color);
+}
+
+.action-icon {
+  font-size: 1.5rem;
+  color: var(--action-color);
+  min-width: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.action-card h3 {
+  color: var(--text-emphasis);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.action-arrow {
+  color: var(--action-color);
+  font-size: 1rem;
+  margin-left: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .dashboard-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .quick-actions-section {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 1.5rem;
+  }
+  
+  .user-welcome-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .user-info {
+    align-items: center;
+  }
+  
+  .welcome-title {
+    font-size: 1.8rem;
+    justify-content: center;
+  }
+  
+  .actions-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  :root {
+    --avatar-size: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-container {
+    padding: 1rem;
+  }
+  
+  .welcome-title {
+    font-size: 1.5rem;
+  }
+  
+  .welcome-subtitle {
+    font-size: 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+  }
+  
+  :root {
+    --avatar-size: 60px;
+  }
+}

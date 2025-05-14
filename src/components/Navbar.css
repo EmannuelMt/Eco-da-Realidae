@@ -1,0 +1,170 @@
+:root {
+  /* Order Paranormal Color Scheme */
+  --color-dark: #0f0a1a;
+  --color-darker: #070510;
+  --color-accent: #8a2be2;
+  --color-accent-light: #b57edc;
+  --color-text: #e2d9f9;
+  --color-text-dim: #b8a9e6;
+  --color-danger: #d62828;
+  --color-warning: #f77f00;
+  --glow-effect: 0 0 10px var(--color-accent-light);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--color-accent);
+  box-shadow: 0 2px 20px rgba(138, 43, 226, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+}
+
+.logo-icon {
+  font-size: 2.2rem;
+  color: var(--color-accent);
+  filter: var(--glow-effect);
+}
+
+.logo-text {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: var(--glow-effect);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.nav-icon {
+  font-size: 1.6rem;
+  margin-bottom: 0.3rem;
+}
+
+.nav-text {
+  font-family: 'Crimson Text', serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.nav-link.active .nav-text {
+  color: var(--color-text);
+  text-shadow: var(--glow-effect);
+}
+
+.active-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 50%;
+  height: 2px;
+  background-color: var(--color-accent);
+  transform-origin: center;
+  box-shadow: var(--glow-effect);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.search-button {
+  background: transparent;
+  border: none;
+  color: var(--color-text-dim);
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.search-button:hover {
+  color: var(--color-accent);
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  background: var(--color-dark);
+  border: 1px solid var(--color-accent);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.search-form input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--color-text);
+  padding: 0.5rem 1rem;
+  outline: none;
+  font-family: 'Crimson Text', serif;
+}
+
+.search-form button {
+  background: transparent;
+  border: none;
+  color: var(--color-text-dim);
+  padding: 0 0.8rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.search-form button:hover {
+  color: var(--color-accent);
+}
+
+.login-container {
+  position: relative;
+}
+
+.login-button {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.7rem 1.5rem;
+  border: 2px solid;
+  border-radius: 30px;
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-button span {
+  font-size: 0.9rem;
+}
+
+.login-button svg {
+  font-size: 1.3rem;
+}

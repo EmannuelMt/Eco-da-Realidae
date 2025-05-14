@@ -1,0 +1,76 @@
+/* src/components/character/AttributeAllocation.css */
+.attribute-allocation {
+    padding: 1rem;
+    background: rgba(30, 30, 30, 0.8);
+    border-radius: 8px;
+    margin-top: 1rem;
+  }
+  
+  .points-remaining {
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+  }
+  
+  .points-remaining span {
+    font-weight: bold;
+    color: #4caf50;
+    font-size: 1.4rem;
+  }
+  
+  .attributes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .attribute-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .attribute-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .attribute-name {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .attribute-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .attribute-controls button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #7b1fa2;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .attribute-controls button:disabled {
+    background: #333;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+  .attribute-value {
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+  }

@@ -1,0 +1,46 @@
+.recent-campaigns {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  
+  .campaigns-list {
+    margin-top: 1rem;
+  }
+  
+  .campaign-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .campaign-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .campaign-icon {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    background: #7b1fa2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .campaign-info h3 {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .campaign-info p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #aaa;
+  }
